@@ -1,69 +1,126 @@
-# MindfulBot — Mental Health Therapist Chatbot
+# EmotionalAI – AI Mental Health Chatbot
 
-A full-stack application providing an empathetic AI-powered mental health chatbot with mood tracking, crisis detection, guided breathing exercises, and an analytics dashboard.
+## Overview
 
-## Tech Stack
-- **Frontend**: React, Vite, Tailwind CSS, Recharts, Lucide Icons
-- **Backend**: Node.js, Express, MongoDB, Mongoose
-- **Authentication**: JWT & bcryptjs
-- **AI Logic**: Custom keyword-based sentiment analysis with a rich empathetic response database (No external API keys required).
+EmotionalAI is an AI-powered mental health chatbot designed to provide emotional support and guidance through conversation.
+The system analyzes user input and responds empathetically, helping users manage stress, anxiety, and emotional concerns.
+
+This project is built using the **MERN stack** and demonstrates the integration of AI-driven conversational interfaces with modern web technologies.
+
+---
 
 ## Features
-- 💬 **Empathetic Chat interface**: Simulates therapeutic presence with typing indicators, intelligent responses, and follow-up questions.
-- 🚦 **Crisis Detection**: Automatically identifies high-risk keywords (e.g., suicide, self-harm) and immediately responds with emergency hotline numbers (e.g., iCall, Vandrevala Foundation) and supportive messages.
-- 😊 **Mood Tracking**: Users log their emotional state at the start of a session (with a 1-10 intensity score).
-- 📊 **Wellness Dashboard**: Visualizes mood trends over time using Recharts and displays usage statistics.
-- 🌬️ **Breathing Exercises**: Integrated 4-7-8 breathing technique animation tool to help ground users experiencing anxiety.
-- 🌓 **Dark Mode**: Fully implemented automatic and manual dark/light themes.
-- 🔒 **Security**: JWT authentication, hashed passwords, API rate-limiting via `express-rate-limit`.
 
-## Project Setup
+* AI-powered conversational chatbot
+* Emotion-aware responses
+* Interactive chat interface
+* Scalable MERN architecture
+* REST API backend
 
-### Prerequisites
-- Node.js (v18+)
-- MongoDB (running locally on `mongodb://localhost:27017` or change the `MONGO_URI` in `server/.env`)
+---
 
-### 1. Server Configuration
-```bash
-cd server
-npm install
+## Tech Stack
+
+### Frontend
+
+* React.js
+* JavaScript
+* CSS
+
+### Backend
+
+* Node.js
+* Express.js
+
+### Database
+
+* MongoDB
+
+### Other Tools
+
+* Git & GitHub
+* npm
+
+---
+
+## Project Structure
+
 ```
-Start the backend server (runs on `http://localhost:5000`):
-```bash
-npm start
-# or for development: npm run dev
+emotionalai
+│
+├── client        # React frontend
+├── server        # Node.js backend
+├── .gitignore
+└── README.md
 ```
 
-### 2. Client Configuration
-Open a new terminal tab:
-```bash
+---
+
+## Installation
+
+### 1️⃣ Clone the Repository
+
+```
+git clone https://github.com/IMMORTAL-PHOENIX-1/emotionalai.git
+cd emotionalai
+```
+
+---
+
+### 2️⃣ Install Dependencies
+
+Install frontend dependencies:
+
+```
 cd client
 npm install
 ```
-Start the frontend client (runs on `http://localhost:5173`):
-```bash
+
+Install backend dependencies:
+
+```
+cd ../server
+npm install
+```
+
+---
+
+## Running the Project
+
+### Start the Backend Server
+
+```
+cd server
+npm start
+```
+
+### Start the Frontend Client
+
+Open a new terminal:
+
+```
+cd client
 npm run dev
 ```
 
-### 3. Usage
-- Go to `http://localhost:5173` in your browser.
-- Register a new account.
-- Select a mood to start a new chat session.
-- Type away or try the breathing exercise! Type "I want to hurt myself" to trigger the crisis detection system.
+---
 
-## Folder Structure
-```
-server/             # Backend code
- ├── models/        # Mongoose schema (User, ChatSession, Message)
- ├── controllers/   # Auth and Chat business logic
- ├── routes/        # Express API routers
- ├── middleware/    # JWT protect, Rate limiters
- └── utils/         # aiEngine.js (Sentiment & Bot Reply Generator)
+## Future Improvements
 
-client/             # Frontend UI code
- ├── src/
- │   ├── api/       # Axios instance with interceptors
- │   ├── components/# Reusable UI (Chat bubble, Navbar, MoodSelector, etc.)
- │   ├── context/   # React Context (Auth, Theme)
- │   └── pages/     # Login, Register, Chat, Dashboard
-```
+* Advanced emotion detection using NLP
+* Conversation history storage
+* AI model integration for personalized responses
+* Mental health resource recommendations
+* Deployment with cloud hosting
+
+---
+
+## Disclaimer
+
+This chatbot is designed for **educational and research purposes only** and is not intended to replace professional mental health care.
+
+---
+
+## Author
+
+Aditya
